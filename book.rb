@@ -4,5 +4,14 @@ class Book
   def initialize(title, author)
     @title = title
     @author = author
+    @has_been_read = false
+  end
+
+  def has_been_read?
+    @has_been_read
+  end
+
+  def mark_as_read!
+    @has_been_read = true
   end
 end
