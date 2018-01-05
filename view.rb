@@ -20,6 +20,12 @@ class View
     return gets.chomp
   end
 
+  def ask_user_to_select_book
+    puts "\nWhich book do you want to remove ?"
+    index = gets.chomp.to_i - 1
+    return index
+  end
+
   def ask_user_if_he_read_it
     puts "\nHave you read it ?"
     puts "Y or N"

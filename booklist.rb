@@ -18,7 +18,7 @@ class Booklist
   end
 
   def destroy(book_index)
-    @cookbook.delete_at(book_index)
+    @booklist.delete_at(book_index)
     update_csv
   end
 

@@ -22,6 +22,10 @@ class Controller
   end
 
   def destroy
+    list
+    book_index = @view.ask_user_to_select_book
+    @booklist.destroy(book_index)
+    list
   end
 
   def mark_as_read

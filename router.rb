@@ -21,6 +21,7 @@ private
     puts ""
     puts "1 - Display my books"
     puts "2 - Add a book to the list"
+    puts "3 - Remove a book from the list"
     puts "6 - Exit"
     puts "----------------------------"
   end
@@ -29,6 +30,7 @@ private
     case action
     when 1 then @controller.list
     when 2 then @controller.create
+    when 3 then @controller.destroy
     when 6 then @running = false
     else
       puts "Please type 1, 2, 3 or 4 :)"
