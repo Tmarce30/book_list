@@ -19,6 +19,9 @@ class Controller
   def destroy
   end
 
+  def mark_as_read
+  end
+
   private
 
   def display_books
