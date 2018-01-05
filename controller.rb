@@ -1,6 +1,7 @@
 require_relative 'booklist'
 require_relative 'book'
 require_relative 'view'
+require 'pry-byebug'
 
 class Controller
   def initialize(booklist)
@@ -23,12 +24,16 @@ class Controller
 
   def destroy
     list
-    book_index = @view.ask_user_to_select_book
+    book_index = @view.book_to_remove
     @booklist.destroy(book_index)
     list
   end
 
   def mark_as_read
+    list
+    book_index = @view.book_to_mark_as_read
+    @booklist.has_been_read(book_index)
+    list
   end
 
   private

@@ -20,10 +20,16 @@ class View
     return gets.chomp
   end
 
-  def ask_user_to_select_book
+  def book_to_remove
     puts "\nWhich book do you want to remove ?"
-    index = gets.chomp.to_i - 1
-    return index
+    book = book_selected
+    return book
+  end
+
+  def book_to_mark_as_read
+    puts "\nWhich book did you read ?"
+    book = book_selected
+    return book
   end
 
   def ask_user_if_he_read_it
@@ -37,5 +43,12 @@ class View
     else
       puts "type Y or N"
     end
+  end
+
+  private
+
+  def book_selected
+    index = gets.chomp.to_i - 1
+    return index
   end
 end

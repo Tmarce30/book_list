@@ -22,6 +22,12 @@ class Booklist
     update_csv
   end
 
+  def has_been_read(book_index)
+    book = @booklist[book_index]
+    book.mark_as_read!
+    update_csv
+  end
+
   private
 
   def update_csv
