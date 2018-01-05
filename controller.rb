@@ -13,7 +13,12 @@ class Controller
   end
 
   def create
-    book = Book.new
+    title = @view.ask_user_for_title
+    author = @view.ask_user_for_author
+    has_been_read = @view.ask_user_if_he_read_it
+    book = Book.new(title, author, has_been_read)
+    @booklist.add(book)
+    list
   end
 
   def destroy

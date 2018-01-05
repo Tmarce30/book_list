@@ -5,12 +5,11 @@ class Router
   end
 
   def run
-    puts "WELCOME TO YOUR BOOKLIST"
-    puts "------------------------"
+    puts "* WELCOME TO YOUR BOOKLIST *"
+    puts "---------------------------"
     while @running
       print_actions
       action = gets.chomp.to_i
-      puts ""
       dispatch(action)
     end
   end
@@ -18,10 +17,10 @@ class Router
 private
 
   def print_actions
-    puts ""
     puts "What do you want to do ?"
     puts ""
-    puts "1 - Display my list of books"
+    puts "1 - Display my books"
+    puts "2 - Add a book to the list"
     puts "6 - Exit"
     puts "----------------------------"
   end
@@ -29,6 +28,7 @@ private
   def dispatch(action)
     case action
     when 1 then @controller.list
+    when 2 then @controller.create
     when 6 then @running = false
     else
       puts "Please type 1, 2, 3 or 4 :)"
