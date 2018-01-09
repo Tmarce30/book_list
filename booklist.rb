@@ -5,7 +5,7 @@ class Booklist
   def initialize(csv_file_path)
     @booklist = []
     @csv_file = csv_file_path
-    CSV.foreach(csv_file_path) { |row| @booklist << Book.new(row[0], row[1]) }
+    CSV.foreach(csv_file_path) { |row| @booklist << Book.new(row[0], row[1], row[2]) }
   end
 
   def all

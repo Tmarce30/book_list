@@ -1,4 +1,4 @@
-class Book
+dclass Book
   attr_reader :title, :author
 
   def initialize(title, author, has_been_read = false)

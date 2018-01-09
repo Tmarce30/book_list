@@ -1,4 +1,5 @@
 require_relative 'booklist'
+require 'pry-byebug'
 
 class View
   def display(booklist)
